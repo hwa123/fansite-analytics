@@ -116,7 +116,6 @@ def main(logpath, *outputpath):
         if len(floodlog[hostkey]) > 3:
             if (hostkey, dt) in checkblocks(hostkey):
                 writing_data(outputpath[-1], rawrow, 'blocks')
-        print idx
 
     # feature 1 results
     hosts_output = sorted(
