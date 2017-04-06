@@ -20,6 +20,7 @@ def writing_data(filepath, data, feature_type=None):
             for k, v in data:
                 writer.write("{},{}\n".format(k, v))
 
+
     if feature_type == 'resources':
         with open(filepath, "wb") as writer:
             for k, v in data:
@@ -29,7 +30,6 @@ def writing_data(filepath, data, feature_type=None):
         with open(filepath, "ab") as writer:
             writer.write("%s" % data)
 
-    writer.close()
 
 
 def checkblocks(url, res=set()):
@@ -120,7 +120,7 @@ def main(logpath, *outputpath):
     # feature 1 results
     hosts_output = sorted(
         hosts.iteritems(), key=operator.itemgetter(1), reverse=True)[:10]
-    writing_data(outputpath[0], hosts_output, 'host')
+    writing_data(outputpath[0], hosts_output, 'hosts')
 
     # feature 2 results
     resources_output = sorted(resources.iteritems(),
