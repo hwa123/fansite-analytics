@@ -1,6 +1,6 @@
 # Code Summary
 
-The code is located under ./src/process_log.py. 
+The code is located under ./src/process_log.py, it's built under Python 2.7 environment. No external library is used. 
 
 ## Repo directory structure
 
